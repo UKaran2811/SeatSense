@@ -970,9 +970,9 @@
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-kicker">Smart seat intelligence for Indian Railways</div>
+  <!-- <div class="hero-kicker">Smart seat intelligence for Indian Railways</div>
   <h1>Find your <em>best seat</em><br/>before the train does.</h1>
-  <p class="hero-sub">SeatSense AI analyses real-time vacancy data from IRCTC and scores every available seat by how long it stays vacant across your exact journey — measured in kilometres.</p>
+  <p class="hero-sub">SeatSense AI analyses real-time vacancy data from IRCTC and scores every available seat by how long it stays vacant across your exact journey — measured in kilometres.</p> -->
 
   <!-- SEARCH CARD -->
   <div class="search-card">
@@ -1094,7 +1094,7 @@
   <div class="results-grid" id="seat-cards"></div>
 
   <!-- COACH MAP -->
-  <div class="coach-map-card">
+  <!-- <div class="coach-map-card">
     <div class="table-header">
       <span class="table-title">Coach Map</span>
       <span class="table-count" id="coach-label">Sleeper Class</span>
@@ -1109,7 +1109,7 @@
       </div>
       <div class="seat-grid" id="seat-grid"></div>
     </div>
-  </div>
+  </div> -->
 
   <!-- FULL TABLE -->
   <div class="table-card">
@@ -1349,15 +1349,15 @@ async function runSearch() {
     document.getElementById('res-dist').textContent       = data.user_dist_km + ' km';
     document.getElementById('res-seats').textContent      = data.total_scanned;
     document.getElementById('res-eligible').textContent   = data.eligible;
-    document.getElementById('coach-label').textContent    =
-      `${data.class_label} · ${data.from_code} → ${data.to_code}`;
+    // document.getElementById('coach-label').textContent    =
+    //   `${data.class_label} · ${data.from_code} → ${data.to_code}`;
 
     const bestSeat = data.ranked_seats[0];
     const bestId   = bestSeat ? `${bestSeat.coach}-${bestSeat.berth_no}` : null;
 
     renderCards(data.ranked_seats, data.from_code, data.to_code, data.user_dist_km);
     renderTable(data.ranked_seats, data.user_dist_km);
-    renderCoachMap(data.ranked_seats, bestId);
+    //renderCoachMap(data.ranked_seats, bestId);
 
     const resultsEl = document.getElementById('results');
     resultsEl.style.display = 'block';
