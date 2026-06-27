@@ -165,4 +165,4 @@ This project is open source. Feel free to use, modify, and distribute it. If you
 
 ---
 
-<p align="center">Made with ❤️ by <a href="https://github.com/UKaran2811">UKaran2811</a></p>
+<p align="center">Made with Efforts by <a href="https://github.com/UKaran2811">UKaran2811</a> <a href="https://github.com/ronakbharodiya123-dev">Ronak Bharodiya</a></p>
